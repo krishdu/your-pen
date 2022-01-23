@@ -1,12 +1,35 @@
 import QuoteList from '../components/quotes/QuoteList';
+import LoadingSpinner from '../components/UI/LoadingSpinner';
+import NoQuotesFound from '../components/quotes/NoQuotesFound';
+import useLocalstorage from '../components/hooks/use-localstorage';
+import { getAllQuotes } from '../components/lib/api';
+import { useEffect } from 'react';
 
-const DUMMY_QUOTES = [
-  { id: 'q1', author: 'Nelson Mandela', text: 'The greatest glory in living lies not in never falling, but in rising every time we fall.' },
-  { id: 'q2', author: 'Walt Disney', text: 'The way to get started is to quit talking and begin doing.' },
-];
 
 const Quotes = () => {
-    return <QuoteList quotes={DUMMY_QUOTES} />;
+    const {sendRequest, status, data: loadedQuotes, error} = useLocalstorage(getAllQuotes, true);
+
+    useEffect(() => {
+      sendRequest();
+    }, [sendRequest]);
+
+    if(status === 'pending'){
+      return <div className='centered'>
+          <LoadingSpinner />
+      </div>
+    }
+
+    if(error){
+      return <div className='centered focused'>
+          {error}
+      </div>
+    }
+
+    if(status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)){
+      <NoQuotesFound />
+    }
+
+    return <QuoteList quotes={loadedQuotes} />;
 };
 
 export default Quotes;

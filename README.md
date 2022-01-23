@@ -1,6 +1,5 @@
-# Getting Started with React Router
+# Getting Started with React Router Dom (V6)
 
--- Work on Storage part (local storage)
 
 ```
 Changes in React Router v6
@@ -12,22 +11,32 @@ Changes in React Router v6
 ```
 Description
 ```
-+ `useNavigate()` -> help to navigate to different pages, add or update query parameter dynamically
++ `useNavigate()` -> help to navigate to different pages, add or update query parameter dynamically.
 + `useLocation()` -> get the current URL( path ).
-+ `new URLSearchParams()` -> extract the params from useLocation's search value (pure JS element)
++ `new URLSearchParams()` -> extract the params from useLocation's search value (pure JS element).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
 ```
-Phase 1
+Phase 1 : Start with creating different pages
 ```
-+ build routing design with dummy data
++ created Quote, Quote Detail and not found pages
++ Define route to navigate
 
 ```
-Phase 2
+Phase 2: Use dummy data
 ```
-+ implement local storage 
++ defined arrays of dummy data
++ Get all the data and show it to Quote page
++ Link all quote Id in view button to get particular Quote
+
+```
+Phase 3 : Replace dummy data with local storage 
+```
++ created some API to interact with local storage (store and retrive quotes, thoughts etc.)
++ Created custom hook to call the APIs
+    + use Reducer to perform to hold the state
 
 ## Available Scripts
 
