@@ -1,5 +1,6 @@
 # Getting Started with React Router Dom (V6)
-
+> Simple Quote storing application, while will access your browser local storage and store
+all the quotes and thoughts.
 
 ```
 Changes in React Router v6
@@ -14,6 +15,14 @@ Description
 + `useNavigate()` -> help to navigate to different pages, add or update query parameter dynamically.
 + `useLocation()` -> get the current URL( path ).
 + `new URLSearchParams()` -> extract the params from useLocation's search value (pure JS element).
+
+
+| [Live Application (👆)]() |
+| ------ |  
+
+<p align="center">
+<img alt="GIF" src="https://github.com/krishdu/Your-Pen/blob/master/your-pen-v1.gif?raw=true" width="800" height="400"/>
+</p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
