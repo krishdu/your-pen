@@ -1,13 +1,13 @@
 # Getting Started with React Router Dom (V6)
-> Simple Quote storing application, while will access your browser local storage and store
+> Simple Quote storing application, whice will access your browser local storage and store
 all the quotes and thoughts.
 
 ```
 Changes in React Router v6
 ```
-> Routes introduce, no need to use exact anymore
-> NavLink usages change (active nav link)
-> useHistory() ---> useNavigate() 
++ Routes introduce, no need to use exact anymore
++ NavLink usages change (active nav link)
++ useHistory() ---> useNavigate() 
 
 ```
 Description
@@ -17,7 +17,7 @@ Description
 + `new URLSearchParams()` -> extract the params from useLocation's search value (pure JS element).
 
 
-| [Live Application (👆)]() |
+| [Live Application (👆)](https://krish-you-pen.herokuapp.com/) |
 | ------ |  
 
 <p align="center">
@@ -56,3 +56,11 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+```
+Deploy : CLI
+```
++ heroku login
++ heroku create `APP_NAME`
++ git add .
++ git commit -m "message"
++ git push heroku master
