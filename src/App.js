@@ -10,7 +10,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/your-pen/" element={<Navigate to="/your-pen/quotes" />} />
+        <Route path="/your-pen" element={<Navigate to="/your-pen/quotes" />} />
         <Route path="/your-pen/quotes" element={<Quotes />} />
         <Route path="/your-pen/quotes/:quoteId/*" element={<QuoteDetail />} />
         <Route path="/your-pen/new-quote" element={<NewQuote />} />
