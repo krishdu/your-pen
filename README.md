@@ -2,7 +2,7 @@
 > Simple Quote storing application, whice will access your browser local storage and store
 all the quotes and thoughts.
 
-| [Live Application (👆)](https://krish-you-pen.herokuapp.com/) |
+| [Live Application (👆)](https://krishdu.github.io/your-pen) |
 | ------ |  
 
 ```
